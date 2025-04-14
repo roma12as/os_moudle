@@ -54,7 +54,7 @@ while True:
     memory_info = get_memory_usage()
     print(memory_info)
     
-    with open(file_name, "a") as file:
+    with open(file_name, "w") as file:
         file.write(f"{memory_info}\n")
     
     time.sleep(5)  
