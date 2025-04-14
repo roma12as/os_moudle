@@ -1,2 +1,1 @@
-CPU Usage: 83.5%, RAM Usage: 89.9%, Disk Usage: 86.9%, Users: [suser(name='ramad', terminal=None, host=None, started=1744551249.8636563, pid=None)]
-CPU Usage: 12.3%, RAM Usage: 87.3%, Disk Usage: 86.9%, Users: [suser(name='ramad', terminal=None, host=None, started=1744551249.8636563, pid=None)]
+
