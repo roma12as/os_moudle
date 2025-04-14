@@ -1,5 +1,9 @@
 import os
 import shutil
+import psutil
+import time
+
+
 
 # الامتدادات المختلفة
 image_extensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".webp"]
@@ -27,3 +31,16 @@ for file in os.listdir():
             shutil.move(file, os.path.join("pdfs", file))
         else:
             print(f"{file} is not a known file type.")
+def get_memory_usage():
+    cpu_usage = psutil.cpu_percent(interval=1)
+
+    # الحصول على نسبة استخدام الرام
+    ram_usage = psutil.virtual_memory().percent
+
+    # الحصول على استخدام القرص الصلب
+    disk_usage = psutil.disk_usage('/').percent
+    net=psutil.users()
+    return f"CPU Usage: {cpu_usage}%, RAM Usage: {ram_usage}%, Disk Usage: {disk_usage}%, Users: {net}"
+while True:
+    print(get_memory_usage())
+    time.sleep(5)
